@@ -14,8 +14,6 @@
 
 defination : props help you create your component dynamic.
 
-1. pass the props (its simple) where you are rendering your component
-2. in your .jsx file for component receive these props as parameter for your component function and use in your component structure.
-3. 
-
-
+1. pass the props (its simple) where you are rendering/importing your component. (parent component)
+2. In your .jsx file for component, receive these props as parameter for your component function and use in your component structure. (child component)
+3. try different data for all the renders (cards).

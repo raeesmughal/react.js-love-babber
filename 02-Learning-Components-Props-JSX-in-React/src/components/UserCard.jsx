@@ -1,13 +1,13 @@
 import './UserCard.css'
 import raeesPic from '../assets/raees.jpg'
 
-const UserCard = ({name}) => {
+const UserCard = ({ name, desc, image, style }) => {
     return (
-        <div className='user-card'>
+        <div className='user-card' style={style}>
             <p className="user-card-name">{name}</p>
-            <img src={raeesPic} alt="pic" className='user-card-image' />
-            <p className='user-card-desc'>Description of raees Mughal</p>
-            
+            <img src={image} alt="pzic" className='user-card-image' />
+            <p className='user-card-desc'>{desc}</p>
+
         </div>
     )
 }
