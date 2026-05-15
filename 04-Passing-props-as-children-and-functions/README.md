@@ -1,16 +1,40 @@
-# React + Vite
+### Passing props as children and function
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+passing "props as children" and passing "function as a child" are two different patterns for component composition.
 
-Currently, two official plugins are available:
+### Props as children
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+when you pass props as children, you don't use the self-closing tag, the content between the opening and closing tags is called children
+<br>
+you can access that content inside the .jsx component file using ({children}) as parameter of the component function
 
-## React Compiler
+<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In short, when you have to create <b>Higher Order Components</b> or <b>Wrappers</b>, you use this functionality or props.children. 
 
-## Expanding the ESLint configuration
+you have a block of code (inside the opening and closing tag), but you want a wrapper for this code, then you use this functionality and send props as children. in this way you are using that component as a wrapper for that content between the tags.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<br>
+<code>Note</code> : if you pass the <code>children</code> as attribute, you can still access it in your .jsx file but the content between the tags will overwrite this.
+
+
+
+### Custom wrapper component
+
+- created a component <code>Button</code> and created a button inside
+- component is receiving everything from its parent.
+  - event to do onclick (handleClick)
+  - text for button (click me)
+  - update after the action (updated value of count)
+
+- parent is passing 
+  - the (function as prop) as attribute 
+  - text as attribute
+  - passing the <code>h1</code> with dynamic value (changing value of count) as the nested value between tags.
+
+
+### Toggle function (function as child)
+
+- <b>Passing the Function:</b> In the parent component, you import Toggle and pass a function inside it as a nested element (as children).
+- <b>Managing State in the Child:</b> Inside the Toggle.jsx file, a state (on and setOn) and a function (toggle) are created. The toggle function's sole job is to update the on state.
+- 
