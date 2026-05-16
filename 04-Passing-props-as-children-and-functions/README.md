@@ -35,6 +35,13 @@ you have a block of code (inside the opening and closing tag), but you want a wr
 
 ### Toggle function (function as child)
 
-- <b>Passing the Function:</b> In the parent component, you import Toggle and pass a function inside it as a nested element (as children).
-- <b>Managing State in the Child:</b> Inside the Toggle.jsx file, a state (on and setOn) and a function (toggle) are created. The toggle function's sole job is to update the on state.
-- 
+- <b>Passing the Function :</b> 
+  - In the parent component, you import Toggle and pass a function inside it as a nested element (as children).
+- <b>Managing State in the Child :</b> 
+  - Inside the Toggle.jsx file, a state (on and setOn) and a function (toggle) are created. The toggle function's sole job is to update the on state.
+- <b>Executing the Child Function :</b> 
+  - The Toggle component receives the children prop as a function. It then returns that function by executing it and passing the state and the updater function as arguments: children({ on, toggle })
+- <b>Receiving Data in the Parent :</b> 
+  - In the parent component, the passed function accepts those two parameters (on and toggle) so it can use them in the UI.
+- <b>Toggling the UI :</b> 
+  - When the header/element is clicked, it calls the toggle function to change the value of on. The text then automatically shows or hides based on whether on evaluates to true or false.
