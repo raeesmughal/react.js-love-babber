@@ -18,3 +18,17 @@
 
 
 ### example from react dev
+
+
+#### Accordion Example :
+
+- <b>Accordion 1</b> : Simple without the use of state lifting
+
+- <b>Accordion 2</b> : Here we are uplifting the state.
+
+
+#### Input example :
+
+- <b>SyncedInput 1</b> : Simple without the use of state lifting. One does not change its value by changing the value of second.
+
+- <b>SyncedInput 2</b> : Here we are uplifting the state. Both of these are linked through 'text' state. where they both share their value and both are synced.
