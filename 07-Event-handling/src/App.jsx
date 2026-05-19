@@ -1,5 +1,6 @@
 
 import './App.css'
+import ColorSwitch from './components/ColorSwitch/ColorSwitch'
 import Toolbar from './components/Toolbar/Toolbar'
 
 function App() {
@@ -65,6 +66,9 @@ function App() {
 
 
       <Toolbar />
+      <div className='br' />
+
+
 
 
 
@@ -72,6 +76,9 @@ function App() {
 
 
     </div>
+    // <div>
+    //   <ColorSwitch />
+    // </div>
   )
 }
 
