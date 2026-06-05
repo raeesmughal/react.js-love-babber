@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import UserDashboard from './components/UserDashboard';
+import Count from './components/Count';
 
 function App() {
 
@@ -25,15 +26,14 @@ function App() {
 
   useEffect(() => {
     // alert('I will run on every render');
-
-
   })
 
 
 
   // 2️⃣ Variation 2
   // runs only once
-  // useEffect below is gonna run 
+  // useEffect below is gonna run
+
 
 
 
@@ -41,7 +41,8 @@ function App() {
   return (
     <div>
       {/* hello g welcome useEffect hook */}
-      <UserDashboard />
+      {/* <UserDashboard /> */}
+      <Count />
     </div>
   )
 }
