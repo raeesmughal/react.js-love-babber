@@ -1,10 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import UserDashboard from './components/UserDashboard';
 import Count from './components/Count';
 
 function App() {
-
 
   // first -> side effect function
   // second -> clean-up function
@@ -24,15 +23,17 @@ function App() {
   // runs on every render
   // below useEffect is gonna run on every render
 
-  useEffect(() => {
-    // alert('I will run on every render');
-  })
+  // useEffect(() => {
+  //   alert('I will run on every render');
+  // })
 
 
 
   // 2️⃣ Variation 2
   // runs only once
   // useEffect below is gonna run
+  
+
 
 
 
@@ -42,7 +43,8 @@ function App() {
     <div>
       {/* hello g welcome useEffect hook */}
       {/* <UserDashboard /> */}
-      <Count />
+      {/* <Count /> */}
+
     </div>
   )
 }

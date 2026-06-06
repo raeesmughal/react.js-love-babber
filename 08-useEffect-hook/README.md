@@ -1,41 +1,31 @@
 ## Learn useEffect Hook in React.js
 
-In React.js, the ```useEffect``` hook is your tool for handling side effects in functional components.
 
-### What is side effect?
+## Count.jsx
 
-A ```side effect``` is basically anything that needs to happen outside the react's normal rendering process.
+1. use the useEffect hook (without dependency array variation), inside the body of Count.jsx
 
-If your component just takes data and turns it into HTML, that's standard rendering. If it needs to reach out into the real world, that's side effect.
-<br>
-In programming, the 'real world' means anything outside of the react's own immediate, local code memory.
+    - so anytime you click the button, ```state``` updates
+    - useEffect runs on every re-render (everytime count updates)
+    - you will see alert everytime count updates
 
+1. Now use the useEffect inside the App.jsx
+    
+    - useEffect runs on first render, ( on page load ) and never runs after that
+    - Everytime clicking on button updates the state but useEffect never runs again
+    - Actually the state is updated in the Count.jsx (in child component)
+    - their is no updation in App.js
+    - ```The render cascades downward```
+    - ```Re-render never goes upward```
+    - App.jsx has no idea that their is a state update in its child.
 
-
-### Common Example include : 
-<b>Fetching data</b> : Fetching data from an API after the component load. In this case, fetching data is the side effect.
-
-<br />
-
-### Why React cares : 
-React is obsessed with speed. To stay fast, it likes to render your components over and over again in a blink of an eye.
-
-If you put a 'real world' action directly inside the component without using the ```useEffect```, look what happens : 
-
-```js
-function WeatherComponent () {
-    // ❌ BAD : Reaching into the real world during standard rendering
-    fetch('https://api.weather.com);
-
-    return <h1>The weather is nice!</h1>
-}
-```
-
-Because react re-renders the things constantly, it would hit this api hundereds of times a minute, (crashing the server).
-
-By putting that code inside the useEffect, you are telling React : *Hey! Once you are completely done rendering, step outside into the real world and go talk to that server*.
+1. Lift up State
+    - create a state in App.jsx (parent)
+    - pass it as a prop to ```<Child />```
+    - use these props inside the Count.jsx to update the state.
+    - in this way the state is updated in parent component using the child component.
+    - both are updated.
+    - now the useEffect used in App.jsx will run on every count updates.
 
 
-
-## Syntax
-
+## 
