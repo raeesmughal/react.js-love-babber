@@ -6,9 +6,9 @@ const TimerComponent = () => {
 
     const [isActive, setIsActive] = useState(true);
 
-    
+
     useEffect(() => {
-        
+
         let intervalId;
 
         if (isActive) {
@@ -21,7 +21,7 @@ const TimerComponent = () => {
 
 
         // looks like this is useless, but everytime event trigger, the component unmount and that is necessary for required output
-        
+
         return () => {
             clearInterval(intervalId);
         }
@@ -38,10 +38,7 @@ const TimerComponent = () => {
     function resetTimer() {
         setIsActive(false);
         setSeconds(0)
-
-
     }
-
 
     return (
         <div>
@@ -51,7 +48,6 @@ const TimerComponent = () => {
                 <button type="button" onClick={toggleTimer}>
                     {isActive ? 'pause' : 'resume'}
                 </button>
-
                 <button type="button" onClick={resetTimer}>
                     reset
                 </button>
