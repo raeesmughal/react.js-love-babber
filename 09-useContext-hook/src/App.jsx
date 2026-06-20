@@ -14,13 +14,16 @@ const UserContext = createContext();
 // step 3 : pass the value
 // step 4 : consume the context inside the consumer component
 
+const ThemeContext = createContext();
 
 
 function App() {
   // const [count, setCount] = useState(0);
   // const [text, setText] = useState('');
 
-  const [user, setUser] = useState({ name: 'Raees Mughal' });
+  const [theme, setTheme] = useState('light');
+
+  const [user, setUser] = useState('Raees Mughal');
 
   return (
     <div>
@@ -37,14 +40,19 @@ function App() {
 
 
 
-      <UserContext.Provider value={user} setUser>
-        <ChildA />
+      <UserContext.Provider value={[user, setUser]}>
+        <ThemeContext.Provider value={[theme, setTheme]}>
+          <div id='container' className={theme}>
+          {/* <div id='container' style={{ backgroundColor: theme == 'light' ? 'white' : 'black', color: theme === 'light' ? 'black' : 'white' }}> */}
+            <ChildA />
+          </div>
+        </ThemeContext.Provider>
       </UserContext.Provider>
 
 
-    </div>
+    </div >
   )
 }
 
 export default App
-export { UserContext }
+export { UserContext, ThemeContext }
