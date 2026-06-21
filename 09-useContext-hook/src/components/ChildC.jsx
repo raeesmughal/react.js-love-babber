@@ -3,8 +3,8 @@ import React, { useContext, useState } from 'react'
 import { UserContext, ThemeContext } from '../App'
 
 const ChildC = () => {
-    const [user, setUser] = useContext(UserContext);
-    const [theme, setTheme] = useContext(ThemeContext);
+    const {user, setUser} = useContext(UserContext);
+    const {theme, setTheme} = useContext(ThemeContext);
 
     const [inputValue,setInutValue] = useState('')
 

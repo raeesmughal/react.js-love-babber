@@ -4,12 +4,13 @@ In React, passing data down through multiple levels of components using props ca
 
 ## How useContext Works? (3 steps process)
 
-1. ### create the context
+### create the context
 
 - you have to import the createContext from react
 - now create this context ```const UserContext = createContext()```
+- also have to export this ``` export {UseContext} ```
 
-1. ### provide the context
+### provide the context
 - wrap the components /child heirarchy (all the components / children in which you are gonna use this context) insie the provider. 
 ```
 <UserContext.Provider>
@@ -18,7 +19,7 @@ In React, passing data down through multiple levels of components using props ca
 ```
 
 
-1. ### add a value
+### add a value
 - inside the opening tag of the ```Provider```, you have to add the value (like an attribute);
 ```
 // value can be any variable
@@ -27,5 +28,7 @@ In React, passing data down through multiple levels of components using props ca
 </UserContext.Provider>
 ```
 
-1. ### consume the context
-- inside any consumer
+### consume the context
+
+- inside any consumer component import the useContext from 'react'
+- now you can share data between these nested child and parent components without 'prop drilling'
