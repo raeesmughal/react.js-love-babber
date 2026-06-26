@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import Navbar from './components/Navbar';
+import Dashboard from './views/Dashboard';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      Hello
-    </div>
-  )
+    <AuthProvider>
+      <ThemeProvider>
+        <Navbar />
+        <main className="main-content">
+          <Dashboard />
+        </main>
+      </ThemeProvider>
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;

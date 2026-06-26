@@ -24,7 +24,6 @@ function ThemeButton() {
             Turn to {theme === 'light' ? 'dark' : 'light'} Mode
         </button>
     )
-
 }
 
 const ContentArea = () => {
