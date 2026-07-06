@@ -1,16 +1,14 @@
-# React + Vite
+# window resize
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Everytime the window is resized, its size is updated on UI.
+<br/>
+<br/>
+Imagine you have several components that need to know the current height and width of the browser window so they can adjust their layout.
+<br/>
+<br/>
+Instead of writing the eventlistener logic in every component, we can create a single ```useWindowSize``` custom hook.
+<br/>
+<br/>
 
-Currently, two official plugins are available:
+```useWindowSize``` returns an object that contains the current height and width
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
