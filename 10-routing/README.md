@@ -1,16 +1,28 @@
-# React + Vite
+## All about routing.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## basic routing
+- using react we can create SPA but for building MPA we have to import the routing functionality as routing is not a build in part of the React.js
 
-Currently, two official plugins are available:
+- instead of `browserRouter` we are gonna use `createBrowserRouter` as its modern and used for large scale projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- install `react-router-dom` to use `createBrowserRouter`
 
-## React Compiler
+- created simple routing setup inside the `App.jsx`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Link & NavLink tags
 
-## Expanding the ESLint configuration
+- now to prevent page from reloading, created a navbar and instead of using `anchor tags` we used `Link` tag (that is a part of react-router-dom)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Replaced `Link` tag with `NavLink` tag as it provides an `active` class.
+
+- `NavLink` Automatically receives an `active` class when the URL matches
+
+- inside the `NavLink` their is a default `isactive` boolean flag that is `true` when you are active on a `NavLink`
+
+## route parameter | Dynamic Routing | URL Parameters
+- in this type of routing
+
+
+
+## query parameter
+
