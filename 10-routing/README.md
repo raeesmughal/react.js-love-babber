@@ -30,3 +30,4 @@
 - `/products?search=shoes&sort=price` here `/products` is a route and their are 2 query parameters after (?)
 
 - unlike <b>dymanic route parameters `/products/:id`</b> query parameters do not need to be defined in your route paths. They are inherently optional and are primarily used for tracking state like filtering, searching, pagination, or sorting.
+
