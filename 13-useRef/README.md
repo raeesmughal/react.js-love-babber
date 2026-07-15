@@ -1,16 +1,23 @@
-# React + Vite
+## useRef in React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- `useRef` is very similar to `useState` hook as both used to store mutable values.
+- but `useRef` lets you reference a mutable value that `does not trigger a re-render` when it changes.
+- `useRef` lets you hold onto a value that `persists` across renders. And changing that value does not trigger a re-render.
+- If you change a `useState` variable, the whole component updates to reflect the change. If you change a `useRef` variable, it changes instantly in the background without disturbing the UI.
 
-Currently, two official plugins are available:
+When you call useRef, it returns a plain JavaScript object with a single property: `current`. 
+```js
+const myRef = useRef(initialValue);
+// Returns: { current: initialValue }
+```
+You can read or update `myRef.current` at any time. React won't interfere, and it won't reload the component when you do.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# The Two Main Use Cases
+While it sounds simple, useRef is incredibly powerful for two specific jobs.
 
-## React Compiler
+## 1. Grabbing HTML Elements Directly (DOM Manipulation)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. Storing Secrets (Values That Don't Affect the UI) 
+
