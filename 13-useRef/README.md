@@ -20,4 +20,3 @@ While it sounds simple, useRef is incredibly powerful for two specific jobs.
 
 
 ## 2. Storing Secrets (Values That Don't Affect the UI) 
-
