@@ -3,10 +3,11 @@ import React from 'react'
 const Dashboard = () => {
   return (
     <div>
-        this isDashboard
+        <h1>This is Dashboard page</h1>
         <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure autem minus assumenda at, eligendi dolorum laboriosam odio placeat velit nisi corrupti nulla repellendus dolor commodi recusandae quia. Nemo, praesentium.
-        </div>
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsum quidem suscipit quae hic esse ea cupiditate mollitia vitae iste sint, quisquam eum dignissimos cumque, culpa voluptate dolorem amet eligendi!
+    </div>
   )
 }
 

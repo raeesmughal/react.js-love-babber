@@ -1,0 +1,16 @@
+ul{
+    background-color: darkslategrey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+.active{
+    color: red;
+    text-decoration: underline;
+
+}
