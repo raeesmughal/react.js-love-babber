@@ -13,7 +13,7 @@ erase all the unnecessary files and the code inside the files (predefined code t
 ### Difference between /public/ and /src/assets folder :
 - think of it like this : <b>Assets</b> go throught the 'processing plant' while <b>public</b> just gets moved to the new house in the box.
 - #### Assets
-  - in this folder all the files are the part of the source code's depencency graph. 
+  - in this folder all the files are the part of the source code's dependency graph.
   - Example: import logo from './assets/logo.png'
   - assets are your assets in the project (as name said)
 

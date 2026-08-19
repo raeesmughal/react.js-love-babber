@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <p>My name is Raees Mughal</p>
+      <p className='text-7xl'>My name is Raees Mughal</p>
     </div>
   )
 }
